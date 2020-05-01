@@ -34,6 +34,14 @@ for t =1:itters
   centroids = moveCentroids(X, c, K);  
 endfor
 
+c = c';
+plotData_2D(X, c);
+hold on
+plotCentroids(centroids);
+xlabel("Sepal Length (cm)");
+ylabel("Sepal Width (cm)");
+title("Clusterd by K-means");
+
 
 
 
