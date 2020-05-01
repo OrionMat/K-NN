@@ -20,3 +20,20 @@ title("Two of four raw features plotted");
 PCA_visualization (X, y, m)
 
 % perform K-NN
+% (checking how well the clusters found would match the classes)
+
+K = 3;
+itters = 10;
+
+centroids = initialiseCentroids(X, K);
+for t =1:itters
+  % assign clusters
+  c = assignClusters(X, centroids);
+  
+  % move centroids
+  centroids = moveCentroids(X, c, K);  
+endfor
+
+
+
+
